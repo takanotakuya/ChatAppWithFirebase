@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="201" id="VZj-Yh-LVe" customClass="ChatRoomTableViewCell" customModule="ChatAppWithFirebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="531" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VZj-Yh-LVe" id="RoB-x8-dUX">
+                <rect key="frame" x="0.0" y="0.0" width="531" height="201"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="146494638_1404121253271826_1138286541238043478_n" translatesAutoresizingMaskIntoConstraints="NO" id="cYb-CB-Zwy">
+                        <rect key="frame" x="15" y="70.5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="cYb-CB-Zwy" secondAttribute="height" multiplier="1:1" id="4gw-yq-wQd"/>
+                            <constraint firstAttribute="width" constant="60" id="u8k-sB-zIp"/>
+                        </constraints>
+                    </imageView>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここに入ります。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-Ia-wvv">
+                        <rect key="frame" x="85" y="25" width="250" height="151"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="wSv-4J-4Mk"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5a-E7-Icd">
+                        <rect key="frame" x="340" y="149" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここに入ります。" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8I-N9-S5L">
+                        <rect key="frame" x="286" y="25" width="225" height="151"/>
+                        <color key="backgroundColor" red="0.60392156862745094" green="0.95686274509803915" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="225" id="JaE-3D-206"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjl-X8-N6k">
+                        <rect key="frame" x="242" y="154" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vxn-Ia-wvv" firstAttribute="top" secondItem="RoB-x8-dUX" secondAttribute="top" constant="25" id="389-Qh-anr"/>
+                    <constraint firstItem="vxn-Ia-wvv" firstAttribute="bottom" secondItem="Y5a-E7-Icd" secondAttribute="bottom" constant="10" id="B0l-ha-8wS"/>
+                    <constraint firstItem="R8I-N9-S5L" firstAttribute="leading" secondItem="cjl-X8-N6k" secondAttribute="trailing" constant="8" id="E95-3c-hiq"/>
+                    <constraint firstAttribute="bottom" secondItem="R8I-N9-S5L" secondAttribute="bottom" constant="25" id="FV3-3Y-a1l"/>
+                    <constraint firstItem="cYb-CB-Zwy" firstAttribute="leading" secondItem="RoB-x8-dUX" secondAttribute="leading" constant="15" id="HGQ-hj-Sjp"/>
+                    <constraint firstAttribute="trailing" secondItem="R8I-N9-S5L" secondAttribute="trailing" constant="20" id="Kpr-u2-2zn"/>
+                    <constraint firstItem="vxn-Ia-wvv" firstAttribute="leading" secondItem="cYb-CB-Zwy" secondAttribute="trailing" constant="10" id="Uz8-Gd-eZP"/>
+                    <constraint firstAttribute="bottom" secondItem="cjl-X8-N6k" secondAttribute="bottom" constant="30" id="Vu0-ov-fLJ"/>
+                    <constraint firstAttribute="bottom" secondItem="vxn-Ia-wvv" secondAttribute="bottom" constant="25" id="YQ5-AT-ogD"/>
+                    <constraint firstItem="cYb-CB-Zwy" firstAttribute="centerY" secondItem="RoB-x8-dUX" secondAttribute="centerY" id="lpW-vI-Tfy"/>
+                    <constraint firstItem="Y5a-E7-Icd" firstAttribute="leading" secondItem="vxn-Ia-wvv" secondAttribute="trailing" constant="5" id="ohO-MW-Qa6"/>
+                    <constraint firstItem="R8I-N9-S5L" firstAttribute="top" secondItem="RoB-x8-dUX" secondAttribute="top" constant="25" id="smz-Wx-M45"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="messageTextViewWidthConstraint" destination="wSv-4J-4Mk" id="W3I-aH-G2r"/>
+                <outlet property="myDateLabel" destination="cjl-X8-N6k" id="fNZ-oR-Dnr"/>
+                <outlet property="myMessageTextView" destination="R8I-N9-S5L" id="voU-DP-awT"/>
+                <outlet property="myMessageTextViewWidthConstraint" destination="JaE-3D-206" id="1EX-AA-rkG"/>
+                <outlet property="partnerDateLabel" destination="Y5a-E7-Icd" id="MK9-7j-v1W"/>
+                <outlet property="partnerMessageTextView" destination="vxn-Ia-wvv" id="UCS-1Q-4UT"/>
+                <outlet property="userImageView" destination="cYb-CB-Zwy" id="vci-YA-fsj"/>
+            </connections>
+            <point key="canvasLocation" x="348.55072463768118" y="26.450892857142858"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="146494638_1404121253271826_1138286541238043478_n" width="320" height="320"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
